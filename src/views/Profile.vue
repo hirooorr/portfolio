@@ -5,10 +5,11 @@
         <div class="content">
             <div class="post">
                 <h1>{{ name }}</h1>  
-                <p>{{ profile }}</p>
-            </div> 
-            <div @click="edit">
-                <button>edit</button> 
+                <p class="text" v-if="active">{{ profile }}</p>
+                <input type="text" v-model="profile" v-else >
+                <div @click="edit">
+                    <button>edit</button> 
+                </div> 
             </div> 
         </div>
     </div>

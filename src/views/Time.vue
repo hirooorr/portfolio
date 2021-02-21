@@ -3,19 +3,16 @@
     <Header2 />
     <div class="time">
         <div class="content">
-            <div class="timecard">
-                <p>明日の起床時間は</p>
-                <select class="timeReserve" v-model="selected">
-                    <option disabled value="">時間選択</option>
-                    <option v-for="time in times"
-                        :value="time.res"
-                        :key="time.id">
-                    {{ time.reserve }}
-                    </option>
-                </select>
-                <p>です</p>
-                <span>Selected: {{ selected }}</span>
-            </div> 
+            <p>明日の起床時間は</p>
+            <select class="timeReserve" v-model="selected">
+                <option disabled value="">時間選択</option>
+                <option v-for="time in times"
+                    :value="time.res"
+                    :key="time.id">
+                {{ time.reserve }}
+                </option>
+            </select>
+            <p>です</p>
             <div @click="edit">
                 <button @click="decide">set</button> 
             </div> 
@@ -34,16 +31,16 @@ export default {
         selected: '',
         times: [
             { res: "0:00" },
-            { res: "0:00" },
-            { res: "0:00" },
-            { res: "0:00" },
-            { res: "0:00" },
-            { res: "0:00" },
-            { res: "0:00" },
-            { res: "0:00" },
-            { res: "0:00" },
-            { res: "0:00" },
-            { res: "0:00" },
+            { res: "0:30" },
+            { res: "1:00" },
+            { res: "1:30" },
+            { res: "2:00" },
+            { res: "2:30" },
+            { res: "3:00" },
+            { res: "3:30" },
+            { res: "4:00" },
+            { res: "4:30" },
+            { res: "5:00" },
         ],
     };
   },
@@ -65,7 +62,6 @@ export default {
     height: 100vh;
 }
 .content {
-    background-color: #ffffff;
     width: 50%;
     margin: auto;
     border-radius: 15px;
@@ -75,6 +71,7 @@ export default {
     cursor: pointer;
     display: block;
     margin: 0 auto;
+    color: black;
 }
 button {
     color: black;

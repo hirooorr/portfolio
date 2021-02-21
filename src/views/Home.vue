@@ -3,9 +3,7 @@
     <Header />
     <img class="back" src="../assets/back.png" >
     <div class="home">
-      <div class="content">
-        <p>nemuTimez</p>
-      </div>
+      <p>nemuTimez</p>
     </div>
   </div>
 </template>
@@ -23,11 +21,12 @@ export default {
 .back {
   width: 100%;
 }
-.content p {
+.home p {
+  color: white;
   font-size: 60px;
   position: absolute;
-  top: 50%;
+  top: 55%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate( -55%, -50%);
 }
 </style>
